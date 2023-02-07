@@ -2,7 +2,7 @@
 <html>
   <head>
       <title>{% block title %}{% endblock %}</title>
-      <link rel="stylesheet" href="./style.css" type="text/css" />
+      <link rel="stylesheet" href="{% block baseurl %}{% endblock %}assets/style.css" type="text/css" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -10,23 +10,26 @@
   <body>
     <header>
       <h2>
-        <a href="index.html">// Code comments</a>
+        <a href="{{ self.baseurl() }}index.html">// Code comments</a>
       </h2>
       <h2>
-        <a href="about.html">About</a>
+        <a href="{{ self.baseurl() }}about.html">About</a>
       </h2>
     </header>
     <div id="content">
       {% block content %}{% endblock %}
     </div>
     <footer>
-      <div id="footer_lhs">
-        <p>// Code Comments</p>
-        <p>My commentary on code</p>
-      </div>
-      <div id="footer_rhs">
-        <p><a href="https://twitter.com/eriklangille" rel="noreferrer noopener" target="_blank">@eriklangille</a></p>
-        <p><a href="https://github.com/eriklangille" rel="noreferrer noopener" target="_blank">@eriklangille</a></p>
+      <br />
+      <div id="footer_content">
+        <div id="footer_lhs">
+          <p>// Code Comments</p>
+          <p>My commentary on code</p>
+        </div>
+        <div id="footer_rhs">
+          <p><a href="https://twitter.com/eriklangille" rel="noreferrer noopener" target="_blank">@eriklangille</a></p>
+          <p><a href="https://github.com/eriklangille" rel="noreferrer noopener" target="_blank">@eriklangille</a></p>
+        </div>
       </div>
     </footer>
   </body>

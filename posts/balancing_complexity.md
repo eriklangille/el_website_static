@@ -1,9 +1,12 @@
-## Balancing Complexity with API design
+Title: Balancing Complexity
+Description: I work with APIs daily at work. I work with APIs at night in my spare time. Perhaps this is because the term "API" or application program interface is too broad... It's a programmer's bread and butter.
+Date: January 23, 2023
+
 I work with APIs daily at work. I work with APIs at night in my spare time. Perhaps this is because the term "API" or application program interface is too broad... It's a programmer's bread and butter.
 
 This week for a side project I was building with the Google Tasks API. This API was originally written a long time ago when google tasks looked like this:
 
-![[Pasted image 20230109083106.png]]
+![Outdated Google Tasks Screenshot](../assets/balancing_complexity_1.png)
 
 Now the look of google tasks has changed over the past 10 years, but the back-end has stayed the same. This is valuable. Software that constantly changes creates more work for no reward. A todo list is relevant for all software engineers that started off making their first CRUD application with something similar. How does an enterprise, like Google, handle the simple to do list?
 
@@ -12,9 +15,10 @@ They keep it simple, stupid. You have requests to list the items, move the order
 Yet there are still some weird peculiars. For example, to move to the end of a list, you have to get the id of the last item in the list, and call the move api with that id. The benefit to this, one could imagine, is that the user wants one item to come after another given item, and not to be the nth item of the list. 
 
 If I have the list:
-1. Cheese
-2. Bacon
-3. Eggs
+
+  1. Cheese
+  2. Bacon
+  3. Eggs
 
 And I want to move Bacon to be after eggs while also adding Worcestershire sauce, then if the sauce if added to the 1st slot and I specified Bacon to be the 3rd, as before the sauce it is 2nd, then bacon remains in the same spot.
 

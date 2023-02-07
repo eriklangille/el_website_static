@@ -1,7 +1,16 @@
 {% extends "base.html" %}
 {% block title %}// Code Comments by Erik{% endblock %}
 {% block content %}
-<p class="important">
-  Welcome to my awesome homepage! 😂
-</p>
+<section id="blog">
+  {% for post in posts %}
+  <article>
+    <h3>
+      <a href="blog/{{ post.url }}">{{ post.title }}</a>
+    </h3>
+    <p class="date">{{ post.date }}</p>
+    <p>{{ post.description }}</p>
+    <p><a href="blog/{{ post.url }}">read more -></p>
+  </article>
+  {% endfor %}
+</section>
 {% endblock %}
