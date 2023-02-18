@@ -26,6 +26,11 @@ header {
   max-width: 600px;
 }
 
+#footer_content img {
+  width: 16px;
+  height: 16px;
+}
+
 h2 {
   margin: 0;
   padding: 0;
@@ -42,6 +47,16 @@ h2 {
 #about img {
   width: 128px;
   height: 128px;
+}
+
+#description img {
+  width: 16px;
+  height: 16px;
+}
+
+#description p {
+  margin: 0.5em 0;
+  vertical-align: middle;
 }
 
 #about h3 {
