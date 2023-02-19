@@ -12,6 +12,11 @@ a {
   color: #000;
 }
 
+#post a {
+  text-decoration: none;
+  color: rgb(36, 80, 255);
+}
+
 header {
   display: flex;
   justify-content: space-between;
