@@ -1,6 +1,6 @@
 Title: LLM Limitations and Zig
 Description: I spent my Sunday understanding Zig. This started by trying to create a "simple" garbage collector. Then I tried leveraging ChatGPT...
-Date: February 19, 2023
+Date: 2023-02-19
 
 I spent my Sunday understanding Zig.
 

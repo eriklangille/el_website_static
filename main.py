@@ -3,6 +3,7 @@ import shutil
 import time
 from dataclasses import dataclass
 from pathlib import Path
+from datetime import date
 
 import boto3
 import markdown
@@ -15,19 +16,23 @@ DISTRIBUTION_ID = 'E200ARC50I19C0'
 @dataclass
 class Post:
   title: str
-  date: str
+  date_iso: date
   content: str
   description: str
   url: str
+
+  @property
+  def date(self):
+    return self.date_iso.strftime('%B %d, %Y')
 
   @staticmethod
   def from_file(file: Path) -> 'Post':
     with file.open('r') as f:
       content = f.read()
-      md = markdown.Markdown(extensions=['meta'])
+      md = markdown.Markdown(extensions=['meta', 'codehilite'])
       html = md.convert(content)
       return Post(title=md.Meta['title'][0],
-                  date=md.Meta['date'][0],
+                  date_iso=date.fromisoformat(md.Meta['date'][0]),
                   description=md.Meta['description'][0],
                   content=html,
                   url=f'{file.stem}.html')
@@ -42,6 +47,9 @@ def generate_posts() -> list[Post]:
   for file in Path('posts').glob('*.md'):
     post = Post.from_file(file)
     posts.append(post)
+  # sort posts by date
+  posts.sort(key=lambda post: post.date_iso, reverse=True)
+
   return posts
 
 def render_blog_posts(posts: list[Post]):

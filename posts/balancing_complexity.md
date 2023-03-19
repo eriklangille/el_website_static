@@ -1,6 +1,6 @@
 Title: Balancing Complexity
 Description: I work with APIs daily at work. I work with APIs at night in my spare time. Perhaps this is because the term "API" or application program interface is too broad... It's a programmer's bread and butter.
-Date: January 23, 2023
+Date: 2023-01-23
 
 I work with APIs daily at work. I work with APIs at night in my spare time. Perhaps this is because the term "API" or application program interface is too broad... It's a programmer's bread and butter.
 
