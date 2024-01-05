@@ -82,6 +82,8 @@ def upload_to_s3(bucket_name: str, build_folder_path: Path):
         s3.upload_file(str(path), bucket_name, s3_file_path, ExtraArgs={'ContentType': 'text/css'})
       elif path.suffix == '.html':
         s3.upload_file(str(path), bucket_name, s3_file_path, ExtraArgs={'ContentType': 'text/html'})
+      elif path.name == '.DS_Store':
+        continue
       else:
         s3.upload_file(str(path), bucket_name, s3_file_path)
 
