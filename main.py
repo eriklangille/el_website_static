@@ -16,7 +16,7 @@ class Post:
 
   @property
   def date(self):
-    return self.date_iso.strftime('%B %d, %Y')
+    return f'{self.date_iso:%B} {self.date_iso.day}, {self.date_iso.year}'
 
   @property
   def url(self):
