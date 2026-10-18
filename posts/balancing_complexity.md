@@ -6,7 +6,7 @@ I work with APIs daily at work. I work with APIs at night in my spare time. Perh
 
 This week for a side project I was building with the Google Tasks API. This API was originally written a long time ago when google tasks looked like this:
 
-![Outdated Google Tasks Screenshot](../assets/balancing_complexity_1.png)
+![Outdated Google Tasks Screenshot](/assets/balancing_complexity_1.png)
 
 Now the look of google tasks has changed over the past 10 years, but the back-end has stayed the same. This is valuable. Software that constantly changes creates more work for no reward. A todo list is relevant for all software engineers that started off making their first CRUD application with something similar. How does an enterprise, like Google, handle the simple to do list?
 

@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
       <title>{% block title %}{% endblock %}</title>
-      <link rel="stylesheet" href="{% block baseurl %}{% endblock %}assets/style.css" type="text/css" />
-      <link rel="stylesheet" href="{{ self.baseurl() }}assets/code.css" type="text/css" />
+      <link rel="stylesheet" href="/assets/style.css" type="text/css" />
+      <link rel="stylesheet" href="/assets/code.css" type="text/css" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <meta charset="UTF-8">
@@ -14,10 +14,10 @@
   <body>
     <header>
       <h2>
-        <a href="{{ self.baseurl() }}index.html" title="Code Comments Home">// Code comments</a>
+        <a href="/" title="Code Comments Home">// Code comments</a>
       </h2>
       <h2>
-        <a href="{{ self.baseurl() }}about.html" title="About Erik Langille">About</a>
+        <a href="/about" title="About Erik Langille">About</a>
       </h2>
     </header>
     <main id="content">
@@ -46,7 +46,7 @@
             <a href="https://twitter.com/eriklangille" rel="noreferrer noopener" target="_blank" aria-label="Erik Langille Twitter">@eriklangille</a>
           </p>
           <p>
-            <img src="{{ self.baseurl() }}assets/gh-circle.png" alt="github" />
+            <img src="/assets/gh-circle.png" alt="github" />
             <a href="https://github.com/eriklangille" rel="noreferrer noopener" target="_blank"  aria-label="Erik Langille GitHub">@eriklangille</a>
           </p>
         </div>

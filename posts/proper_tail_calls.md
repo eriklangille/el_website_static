@@ -86,7 +86,7 @@ Guido von Rossum, creator of the Python language, also adds that tail call *opti
 
     console.log(notTco(10)) // Also outputs 10
 
-Therefore, tail call optimization can be viewed as a stylistic choice. And one that [Guido argues is not Pythonic](http://neopythonic.blogspot.com/2009/04/final-words-on-tail-calls.html).
+Therefore, tail call optimization can be viewed as a stylistic choice. And one that [Guido argues is not Pythonic](https://neopythonic.blogspot.com/2009/04/final-words-on-tail-calls.html).
 
 But JavaScript is not Python. JavaScript has adopted a lot of the functional languages paradigms, such as closures and chaining higher order functions. In addition, if we wanted to squeeze the last bit of performance out of our applications, shouldn't we be implementing every optimization?
 
@@ -94,7 +94,7 @@ It was likely in this spirit why proper tail calls was [adopted as part of the E
 
 Safari's JavaScriptCore is the have your cake and eat it too solution. And it's the only major browser to implement tail call optimization as specified. Referring back to the Bun console output, we can observe the arguably confusing stack trace. But the story changes when we [open the debugger](https://bun.sh/docs/runtime/debugger#inspect-brk) and pause on exceptions:
 
-![Safari Webkit Inspector Tail Call Stack](../assets/tco_debugger.png)
+![Safari Webkit Inspector Tail Call Stack](/assets/tco_debugger.png)
 
 Wait. How can there be a full stack trace if the stack calls have been optimized away?
 
