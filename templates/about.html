@@ -3,15 +3,21 @@
 {% block description %}Erik Langille is a software developer in Vancouver who writes about programming.{% endblock %}
 {% block content %}
 <article id="about">
-  <img src="/assets/erik_photo.jpg" alt="Erik Langille" id="portrait" />
-  <h1>Erik Langille</h1>
-  <p>I write code. Based in Vancouver.</p>
-  <p>
-    Find me on
-    <a href="https://github.com/eriklangille" rel="noreferrer noopener" target="_blank">GitHub</a>,
-    <a href="https://x.com/eriklangille" rel="noreferrer noopener" target="_blank">X</a>
-    and
-    <a href="https://linkedin.com/in/eriklangille" rel="noreferrer noopener" target="_blank">LinkedIn</a>.
-  </p>
+  <div id="intro">
+    <img src="/assets/erik_photo.jpg" alt="Erik Langille" id="portrait" />
+    <div>
+      <h1>Erik Langille</h1>
+      <span class="comment">Software developer in Vancouver</span>
+    </div>
+  </div>
+  <p>I write code. This blog is where I write about it.</p>
+  <dl id="links">
+    <dt>github</dt>
+    <dd><a href="https://github.com/eriklangille" rel="noreferrer noopener" target="_blank">eriklangille</a></dd>
+    <dt>x</dt>
+    <dd><a href="https://x.com/eriklangille" rel="noreferrer noopener" target="_blank">@eriklangille</a></dd>
+    <dt>linkedin</dt>
+    <dd><a href="https://linkedin.com/in/eriklangille" rel="noreferrer noopener" target="_blank">in/eriklangille</a></dd>
+  </dl>
 </article>
 {% endblock %}
