@@ -6,6 +6,7 @@
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <time datetime="{{ post.date_iso }}">{{ post.date }}</time>
     <p>{{ post.description }}</p>
+    <a href="{{ post.url }}" class="read-more">read more -></a>
   </article>
   {% endfor %}
 </section>
